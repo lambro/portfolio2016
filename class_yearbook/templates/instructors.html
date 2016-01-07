@@ -1,0 +1,18 @@
+<h1 class="alternative">Choose your player</h1><alternate-heading-text></alternate-heading-text>
+<section>
+  <div>
+    <ul>
+      <div class="instructor-container"><a href="./#/instructor/{{ instructor.id }}"
+        ng-repeat="instructor in instructors"
+        ng-click="selectInstructor(instructor)"
+        ng-mouseover="hoveredInstructor(instructor)"
+        ng-mouseout="clearHoveredInstructor()"><img ng-src="{{instructor.mainImage}}" alt="{{instructor.name}} Main Image" class="instructor-profile">
+      </div></a>
+    </ul>
+
+    <section ng-show="hoveredInstructor" class="meet">
+        {{ instructor.name }}
+    </section>
+
+  </div>
+</section>

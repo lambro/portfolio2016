@@ -1,0 +1,19 @@
+<div class="tabs">
+  <ul>
+    <li ng-class="{highlighted: tabs.isSelected(1)}">
+      <a href ng-click="tabs.selectTab(1)"><i class="fa fa-bullhorn"></i>Quote</a>
+    </li>
+    <li ng-class="{highlighted: tabs.isSelected(2)}">
+      <a href ng-click="tabs.selectTab(2)"><i class="fa fa-book"></i>Bio</a>
+    </li>
+    <li ng-class="{highlighted: tabs.isSelected(3)}">
+      <a href ng-click="tabs.selectTab(3)"><i class="fa fa-gamepad"></i>Portfolio</a>
+    </li>
+  </ul>
+  <div ng-show="tabs.isSelected(1)" class="st-quote"> <i class="fa fa-quote-left"></i>{{ student.quote }}<i class="fa fa-quote-right"></i></div>
+  <div ng-show="tabs.isSelected(2)" class="st-bio"><h2>{{student.name}}</h2><br>{{ student.description }} </div>
+  <div ng-show="tabs.isSelected(3)" class="st-portfolio">
+    {{ student.links }}
+    More information
+    </div>
+</div>

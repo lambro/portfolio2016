@@ -1,0 +1,22 @@
+<alternate-heading-text></alternate-heading-text>
+<section id="one" class="studentdeets" >
+    <div class="left">
+        <a href="./" class='close'>
+          <img class="avatar" ng-src="{{instructor.moveImage}}" alt="{{instructor.name}} Main Image">
+      </a>
+  </div>
+
+  <div class="right">
+    <img class="realphoto" src="{{instructor.realImage}}">
+    <h1>{{instructor.name}}</h1>
+    <a ng-click="scrollToBottom()" class="clickhere"><h1 class="continue">Continue?</h1></a>
+</div>
+
+<div id="two" name="two" class="desc deetsdesc bottom">
+    <div data-instructor-tabs></div>
+</div>
+</section>
+
+<a id="top-scroll" name="top"></a>
+<div class="back-to-top" scroll-to-item scroll-to="#top-scroll">
+

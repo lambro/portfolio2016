@@ -1,80 +1,43 @@
-<html>
+<!doctype html>
+<html lang="en" ng-app="drinkLessApp">
 <head>
-  <title>LAMB 2016</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Cutive|Special+Elite|Lato:400,100|Josefin+Sans|Squada+One|Quicksand' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <meta charset="utf-8">
+  <title>L A M B</title>
+  <meta name="description" content="Potfolio">
+  <meta name="author" content="Lamb">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Voces|Overlock|Offside|Anton|Damion|Sacramento|Josefin+Slab|Inconsolata' rel='stylesheet' type='text/css'>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0/angular.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/prettyPhoto.css">
 </head>
+
 <body>
-  <section class="section video">
-    <h1 >Video</h1>
-  </section>
+  <div class="container-fluid main-wrapper">
+    <div ng-view></div>
+  </div>
 
-  <section class="section introduction">
-    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><h1>Laura Ambrose</h1></a>
-    <p id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">Laura is a <b>Web Developer</b> with a leaning towards <b>Front End Development</b> currently based in London. With a Masters in Science and fluency in Korean she has a  wide range of experience. She destroys jars of Nutella at an impressive pace and is an avid gamer. Feed your curiosity below.</p>
-  </section>
+<footer>
 
-  <section class="section about">
-    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><h1>About</h1></a>
-    <p id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">>After graduating from my Masters, I decided to take some time out and travel Asia. I moved to Korea, where I taught English at first. While I was doing this I had a scooter accident, which made me realise that life is short and I should appreciate every day I have. I made an effort to get into jobs that I would wake up in the morning and look forward to going in to do, first at advertising agencies, then went on to do some modelling, TV work and play bass guitar in a band. I then decided to return to London and after a year back started experimenting with coding and ruby on the advice of many of my close friends, who described me as a "massive geek who just didn't know it yet". I realised it was something that I really enjoyed and that I wanted to do everyday so took steps to make this part of my life and work with my courses at General Assembly.</p>
-  </section>
+</footer>
 
-  <section class="section experience">
-    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><h1>Experience</h1></a>
-    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree"><p>
-          <h2>Web Development Immersive Student | </h2><h3>  General Assembly</h3> <br>
-          September 2014 - December 2014 (3 months) | London, United Kingdom <br>
-          "Coding all day every day!"
-          After enjoying General Assembly's Front End course I wanted a more involved course that would help me switch careers. I really enjoyed learning how to build sites and apps from the back to the front. I am looking forward to applying what I have learnt to my daily life and work.
-          <br>
-          I learnt a variety of coding languages, with focus on Ruby and Ruby on Rails. Some of the languages and frameworks covered include SQL, Sinatra, Ruby, Ruby on Rails, JavaScript, Canvas, JQuery, Ajax, Angular.js, Node.js, CSS/SCSS, HTML/HAML and Git regularly. <br>
-          We practiced an AGILE environment for our work, using Trello to organise group work.
-        </p>
-    
-        <p>
-          <h2>Front End Web Development Student | </h2> <h3> General Assembly</h3> <br>
-          June 2014 - August 2014 (3 months) | London, United Kingdom <br>
-        </p>
-    
-        <p>
-          <h2>Medical PA | </h2> <h3> Medisec UK Limited</h3> <br>
-          May 2013 - September 2014 (1 year 5 months) | Various locations in Essex
-        </p>
-    
-        <p>
-          <h2>Account Executive | </h2> <h3> Cartel Creative</h3> <br>
-          July 2012 - November 2012 (5 months) Apgujeong, Gangnam, Seoul</p>
-    </div>
-  </section>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+      $("a[rel^='prettyPhoto']").prettyPhoto();
+    });
+  </script>
+</body>
 
-  <section class="section tech">
-    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><h1>Technical Specifications</h1></a>
-  </section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0/angular-animate.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0/angular-route.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<!-- // <script type="text/javascript" src="js/lightbox.js"></script> -->
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/form-page-controller.js"></script>
+<script type="text/javascript" src="js/app-controller.js"></script>
+<script type="text/javascript" src="js/routes.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
-  <section class="section education">
-    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><h1>Education</h1></a>
-  </section>
-
-  <section class="section projects">
-    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><h1>Projects</h1></a>
-  </section>
-
-  <section class="section real">
-    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><h1>Extra Stuff</h1></a>
-  </section>
-
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </html> 
-
-
-
-<!-- INSTAGRAM_PROFILE_CLIENT_ID
-INSTAGRAM_PROFILE_SECRET
-
-INSTAGRAM_PROFILE_USER_ID
-
-INSTAGRAM_TOKEN -->
+</html>

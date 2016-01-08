@@ -9,14 +9,14 @@ app.config(function($routeProvider, $locationProvider){
   })
   // $locationProvider.html5Mode(true);
 
-  $routeProvider.when('/form-page',{
+  $routeProvider.when('/about',{
     controller: 'FormPageController',
-    templateUrl: './templates/form-page.html'
+    templateUrl: './templates/about.html'
   });
 
-  $routeProvider.when('/form-two-page',{
+  $routeProvider.when('/skills',{
     controller: 'FormPageController',
-    templateUrl: './templates/form-two-page.html'
+    templateUrl: './templates/skills.html'
   });
 
   $routeProvider.when('/introduction',{
@@ -24,14 +24,24 @@ app.config(function($routeProvider, $locationProvider){
     templateUrl: './templates/introduction.html'
   });
 
-  $routeProvider.when('/final-page',{
+  $routeProvider.when('/experience',{
     controller: 'FormPageController',
-    templateUrl: './templates/final-page.html'
+    templateUrl: './templates/experience.html'
   });
 
-  $routeProvider.when('/rules',{
+  $routeProvider.when('/education',{
     controller: 'FormPageController',
-    templateUrl: './templates/rules.html'
+    templateUrl: './templates/education.html'
+  });  
+
+  $routeProvider.when('/projects',{
+    controller: 'FormPageController',
+    templateUrl: './templates/projects.html'
+  });  
+
+  $routeProvider.when('/contactform',{
+    controller: 'FormPageController',
+    templateUrl: './templates/contactform.html'
   });
 
 });

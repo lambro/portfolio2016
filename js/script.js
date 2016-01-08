@@ -5,31 +5,45 @@ app.directive('introduction', function(){
   };
 });
 
-app.directive('formPage', function(){
+app.directive('about', function(){
   return{
     restrict: 'E',
-    templateUrl: '/templates/form-page.html'
+    templateUrl: '/templates/about.html'
   };
 });
 
-app.directive('formTwoPage', function(){
+app.directive('skills', function(){
   return{
     restrict: 'E',
-    templateUrl: '/templates/form-two-page.html'
+    templateUrl: '/templates/skills.html'
   };
 });
 
-app.directive('finalPage', function(){
+app.directive('experience', function(){
   return{
     restrict: 'E',
-    templateUrl: '/templates/final-page.html'
+    templateUrl: '/templates/experience.html'
   };
 });
 
-app.directive('rules', function(){
+app.directive('education', function(){
   return{
     restrict: 'E',
-    templateUrl: '/templates/rules.html'
+    templateUrl: '/templates/education.html'
+  };
+});
+
+app.directive('projects', function(){
+  return{
+    restrict: 'E',
+    templateUrl: '/templates/education.html'
+  };
+});
+
+app.directive('contactform', function(){
+  return{
+    restrict: 'E',
+    templateUrl: '/templates/contactform.html'
   };
 });
 

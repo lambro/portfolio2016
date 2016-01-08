@@ -18,15 +18,17 @@
     <div ng-view></div>
   </div>
 
-<footer>
-
+<footer class="container">
+<div class="row">
+  <h2 class="col-xs-2"><i class="fa fa-twitter"></i></h2>
+  <h2 class="col-xs-2"><i class="fa fa-github"></i></h2>
+  <h2 class="col-xs-4">LAMB 2016</h2>
+  <h2 class="col-xs-2"><i class="fa fa-linkedin"></i></h2>
+  <h2 class="col-xs-2"><i class="fa fa-envelope-o"></i></h2>
+  </div>
 </footer>
 
-  <script type="text/javascript" charset="utf-8">
-    $(document).ready(function(){
-      $("a[rel^='prettyPhoto']").prettyPhoto();
-    });
-  </script>
+
 </body>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0/angular-animate.min.js"></script>
@@ -39,5 +41,10 @@
 <script type="text/javascript" src="js/app-controller.js"></script>
 <script type="text/javascript" src="js/routes.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+  });
+</script>
 
 </html>

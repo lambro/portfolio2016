@@ -55,7 +55,7 @@ h4{
   height: @mobile-square-height;
   padding: ((@mobile-square-height/2) - @font-size-base) 0;
   background-color: #000000;
-  border: solid #ffffff 1px;
+  border: solid #ffffff 2px;
   @media (min-width: @screen-md-min) {
     height: 300px;
     padding: 110px 0;
@@ -73,6 +73,11 @@ h4{
     a {
       text-decoration: none;
     }
+  }
+  &.name{
+    background-image: url(../images/leather.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

@@ -1,2 +1,2 @@
-var app = angular.module('drinkLessApp', ['ngAnimate', 'ngRoute'])
+var app = angular.module('profilePage', ['ngAnimate', 'ngRoute'])
   

@@ -19,9 +19,9 @@ app.config(function($routeProvider, $locationProvider){
     templateUrl: './templates/skills.html'
   });
 
-  $routeProvider.when('/introduction',{
+  $routeProvider.when('/introduction/',{
     controller: 'FormPageController',
-    templateUrl: './templates/introduction.html'
+    templateUrl: './templates/introduction.html',
   });
 
   $routeProvider.when('/experience',{
@@ -43,5 +43,4 @@ app.config(function($routeProvider, $locationProvider){
     controller: 'FormPageController',
     templateUrl: './templates/contactform.html'
   });
-
 });

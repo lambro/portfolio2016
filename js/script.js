@@ -1,7 +1,21 @@
+var insta = function(){
+  var userFeed = new Instafeed({
+      get: 'user',
+      userId: '179689416',
+      accessToken: '179689416.467ede5.d849175aafaf40b3a130577a4379a702',
+      sortBy: 'most-liked',
+      limit: '12',
+      template: '<a href="{{link}}"><img class="instagram-pic col-md-1 col-xs-3 img-responsive" src="{{image}}" /></a>'
+  });
+  userFeed.run();
+}
+
+insta();
+
 app.directive('introduction', function(){
   return{
     restrict: 'E',
-    templateUrl: '/templates/introduction.html'
+    templateUrl: '/templates/introduction.html',
   };
 });
 
@@ -47,9 +61,6 @@ app.directive('contactform', function(){
   };
 });
 
-app.directive('prettyp', function(){
-  return function(scope, element, attrs) {
-    $("[rel^='prettyPhoto']").prettyPhoto({deeplinking: false, social_tools: false, default_width: 600,
-      default_height: 500,});
-  }
-})
+
+
+

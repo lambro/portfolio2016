@@ -1,6 +1,7 @@
 @import "variables.less";
 
-@mobile-square-height:  180px;
+@mobile-square-height:  150px;
+@square-height:         200px;
 @footer-height:         30px;
 
 body{
@@ -44,30 +45,33 @@ h4{
 }
 
 .landing-page{
-  margin-top: 2px;
+  margin-top: 12px;
   margin-bottom: @footer-height+20;
   background-color: transparent;
   @media (min-width: @screen-md-min) {
-    margin-top: 0;
+    margin-top: 50px;
   }
 }
 
 .home-menu-section {
   height: @mobile-square-height;
   padding: ((@mobile-square-height/2) - @font-size-base) 0;
+  @media (min-width: @screen-md-min) {
+    height: @square-height;
+    padding: ((@square-height/2) - @font-size-base) 0;
+  }
   background-color: #000000;
   border: solid #ffffff 2px;
-  @media (min-width: @screen-md-min) {
-    height: 300px;
-    padding: 110px 0;
-  }
   h1{
     .text-center;
     .no-padding;
     margin: 5px;
     text-transform: uppercase;
     color: #ffffff;
-    font-size: @font-size-base;
+    font-size: (@font-size-base - 1);
+    @media (min-width: @screen-md-min) {
+      font-size: (@font-size-base+1);
+    }
     &.center{
       font-size: @font-size-base+5;
     }
@@ -81,9 +85,21 @@ h4{
     background-size: cover;
   }
 }
+.top-nav{
+  div:last-child{
+    padding-top: 3px;
+    a{
+      font-size: @font-size-base*1.5;
+      
+  }
+  }
+}
 
 // introduction section //
 .sub-page{
+  h1{
+    margin-top: @padding-base-vertical*8;
+  }
   &.education{
     h3, h4{
       padding-left: @padding-base-horizontal;
@@ -101,13 +117,35 @@ h4{
         font-weight: bold;
       }
     }
+    .project{
+      margin-top: @padding-base-vertical*5;
+      h3{
+        padding-bottom: @padding-base-vertical;
+        border-bottom: solid 1px @gray-light;
+      }
+    }
     .proj2{
+      .col-md-12:first-child{
+        margin-bottom: @padding-base-vertical*5;
+      }
+      .pic{
+        margin-top: 20px;
+      }
       margin: 20px auto;
+      h3{
+        padding-bottom: @padding-base-vertical;
+        border-bottom: solid 1px @gray-light;
+      }
     }
   }
-  img{
+  img:not(.image-deco){
     .no-padding;
     .no-margin;
+  }
+  .introduction {
+    .image-deco{
+      .no-padding;
+    }
   }
   .image-top{
     height: 200px;
@@ -155,7 +193,7 @@ h4{
   .mini-nav{
     margin: (@padding-base-vertical*2) auto;
     .contact{
-      font-size: 13px;
+      font-size: 10px;
     }
     i{
       font-size: @font-size-base*1.5;
@@ -176,11 +214,22 @@ h4{
     margin-top: 0;
   }
   h1{
-    padding: 5%;
+    padding: 2%;
   }
   p {
-    padding: @padding-base-vertical @padding-base-horizontal+5;
+    padding: @padding-base-vertical @padding-base-horizontal;
     .text-center;
+  }
+}
+
+
+.introduction{
+  .mini-nav{
+    margin: (@padding-base-vertical*2) auto (@padding-base-vertical*4) ;
+  }
+  .instagram-pic {
+    border-top: solid 4px #000000;
+    border-bottom: solid 4px #000000;
   }
 }
 
@@ -202,6 +251,21 @@ h4{
   padding-top: 7px;
   -webkit-transition: color 1s ease;
   -moz-transition: color 1s ease;
+  transition: color 1s ease;
+  span{
+    margin-left: @padding-base-horizontal;
+    color: transparent;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    transition: color 1s ease;
+  }
+  &:hover{
+    span{
+      @media (min-width: @screen-md-min) {
+        color: #000000;
+      }
+    }
+  }
   &:last-child{
     margin-bottom: @padding-base-vertical+10;
   }
@@ -210,35 +274,123 @@ h4{
 .inner{
   line-height: 45px;
   height:45px;
-  @media (min-width: @screen-md-min) {
-    line-height: 45px;
-    height:45px;
-  }
   background-color:#000000;
   display:inline-block;
   font-size: 1.5em;
   padding-left: @padding-base-horizontal;
   color:white;
-  -webkit-transition: color 1s ease;
-  -moz-transition: color 1s ease;
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  transition: color .3s ease;
   &#html{
-    width:90%;
+    width:86%;
+    -webkit-transition: width .3s ease;
+    -moz-transition: width .3s ease;
+    transition: width .3s ease;
+    @media (min-width: @screen-md-min) {
+      &:hover{
+        width:91%;
+      }
+    }
   }
   &#css{  
     width:85%;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
+      -moz-transition: width .3s ease;
+      @media (min-width: @screen-md-min) {
+        &:hover{
+          width:90%;
+        }
+      }
   }
   &#ror{
     width:55%;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
+      -moz-transition: width .3s ease;
+      @media (min-width: @screen-md-min) {
+        &:hover{
+          width:60%;
+        }
+      }
   }
   &#javaScript{
     width:60%;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
+      -moz-transition: width .3s ease;
+      @media (min-width: @screen-md-min) {
+        &:hover{
+          width:65%;
+        }
+      }
   }
   &#jquery{  
     width:75%;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
+      -moz-transition: width .3s ease;
+      @media (min-width: @screen-md-min) {
+        &:hover{
+          width:80%;
+        }
+      }
   }
   &#angularJs{
-    width:70%;
+  width:70%;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
+      -moz-transition: width .3s ease;
+      @media (min-width: @screen-md-min) {
+        &:hover{
+          width:75%;
+        }
+      }
   }
+}
+
+.show-box{
+    border: solid 1px @gray-light;
+    margin-top: @padding-base-vertical;
+    margin-bottom: @padding-base-vertical;
+    height: 70px;
+    @media (min-width: @screen-md-min) {
+    height: 50px;
+    }
+    transition: 0s linear all;
+    -webkit-transition: 0s linear all;
+    p{
+      color: @gray-light;
+      font-size: @font-size-base;
+      padding-top: @padding-base-vertical; 
+      @media (min-width: @screen-md-min) {
+      font-size: @font-size-base+1;
+      padding-top: @padding-base-vertical*2;     
+      }
+    }
+    &.ng-hide-remove {
+      opacity: 0;
+      height: 0;
+      display: block !important;
+      transition: .3s linear all;
+      -webkit-transition: .3s linear all;
+    }
+    &.ng-hide-remove.ng-hide-remove-active {
+      opacity: .5;
+      height: 50px;
+    }
+    &.ng-hide-add {
+      opacity: .5;
+      height: 50px;
+      display: block !important;
+      transition: .3s linear all;
+      -webkit-transition: .3s linear all;
+    }
+    &.ng-hide-add.ng-hide-add-active {
+      height: 0px;
+      opacity: 0;
+    }
 }
 
 #contact{
@@ -261,6 +413,7 @@ h4{
 
 footer{
   height: @footer-height;
+  margin-bottom: -2px;
   @media (min-width: @screen-md-min) {
     height: @footer-height;
   }

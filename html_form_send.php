@@ -43,7 +43,7 @@ if(isset($_POST['email'])) {
     $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
   }
   if(strlen($comments) < 2) {
-    $error_message .= 'The message you entered does not appear to be valid, please write at little bit more. <br />';
+    $error_message .= 'The message you entered does not appear to be valid, please write at least one word. <br />';
   }
   if(strlen($error_message) > 0) {
     died($error_message);

@@ -1,11 +1,12 @@
 @import "variables.less";
+@import "home-page.less";
 
 @mobile-square-height:  150px;
 @square-height:         200px;
 @footer-height:         30px;
 
 body{
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 a {
@@ -53,49 +54,34 @@ h4{
   }
 }
 
+
+// ------------------------------------------------------
+// #### landing page section ####
+// ------------------------------------------------------
+
+
 .home-menu-section {
-  height: @mobile-square-height;
-  padding: ((@mobile-square-height/2) - @font-size-base) 0;
-  @media (min-width: @screen-md-min) {
-    height: @square-height;
-    padding: ((@square-height/2) - @font-size-base) 0;
-  }
-  background-color: #000000;
-  border: solid #ffffff 2px;
-  h1{
-    .text-center;
-    .no-padding;
-    margin: 5px;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-size: (@font-size-base - 1);
-    @media (min-width: @screen-md-min) {
-      font-size: (@font-size-base+1);
-    }
-    &.center{
-      font-size: @font-size-base+5;
-    }
-    a {
-      text-decoration: none;
-    }
-  }
-  &.name{
-    background-image: url(../images/leather.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  a{
+    color: white;
   }
 }
+
+// ------------------------------------------------------
+// #### Navigation section ####
+// ------------------------------------------------------
+
 .top-nav{
   div:last-child{
     padding-top: 3px;
     a{
       font-size: @font-size-base*1.5;
-      
-  }
+    }
   }
 }
 
-// introduction section //
+// ------------------------------------------------------
+// #### Introduction ####
+// ------------------------------------------------------
 .sub-page{
   h1{
     margin-top: @padding-base-vertical*8;
@@ -114,7 +100,7 @@ h4{
   &.projects{
     p{
       a{
-        font-weight: bold;
+        font-weight: normal;
       }
     }
     .project{
@@ -234,6 +220,14 @@ h4{
 }
 
 //typing text??
+
+body {
+  text-align: center;
+  color:#D9D9D9;
+  padding-top:10em;
+}
+
+* { color:#fff; text-decoration: none;}
 
 .tech{
   margin-bottom: @padding-base-vertical;

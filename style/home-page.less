@@ -1,24 +1,57 @@
-div[class^="row"] {
-  display: flex;
-  justify-content: center;
+.boxLoop(@counter) when (@counter > 0) {
+  .boxLoop((@counter - 1));
+  .box-@{counter} {
+    flex-grow: @counter;
+  }
+}
 
-  div[class^="box"] {
-    border: solid 10px red;
-    background: white;
-    transform: skewX(-30deg);
-    height: 20vh;
-    width: 40%;
-    display: inline-block;
-    margin: 16px;
-    .inner{
-      transform: skewX(30deg);
-      background: #ffffff;
-      width: 100%;
-      height: 100%;
-      h1{
-        color: black;
-      }
+.boxLoop(10);
+
+div{
+  padding: 5px;
+}
+
+.outer-wrapper{
+  padding: 0;
+  .title-section{
+    display: flex;
+    h1{
+      color:black;
+      text-align: left;
     }
   }
+  .comic-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    .comic-row{
+      display:flex;
+      margin-bottom: 16px;
+      padding: 0;
+      flex-wrap: wrap;
+      div[class^="box"]{
+        height: 300px;
+        background-color: teal;
+        margin: 0 8px;
+        min-width: 300px;
+
+      }
+      .timestamp{
+        height: 32px;
+        background-color: white;
+        color: black;
+        text-decoration: uppercase;
+        font-style: italic;
+        background-color: orange;
+      }
+      .speech{
+        background-color: pink;
+        height: 32px;
+        color: black;
+        text-decoration: uppercase;
+        font-style: italic;
+      }
+    }
+  }   
 }
 
